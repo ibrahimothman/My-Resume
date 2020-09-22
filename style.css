@@ -1,0 +1,213 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  background: #F2F2F2;
+  color: #323232;
+}
+
+.icon {
+  color: #236FB2;
+  margin-right: 2px;
+}
+
+a {
+  color: #323232;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 32px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  padding: 24px 0;
+  border-bottom: 1px solid lightgrey;
+}
+
+section.two-cols{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 20px;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/***********************************
+* =Main Info
+***********************************/
+
+img.avatar {
+  width: 130px;
+}
+
+.my-name {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1  ;
+}
+
+.my-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #236FB2;
+}
+
+p span {
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0 20px 0;
+}
+
+.link-item {
+  /* flex: 1; */
+  margin-bottom: 5px;
+  margin-right: 30px;
+
+}
+
+/***********************************
+* =Experience
+***********************************/
+
+.job {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.job:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0px;
+}
+
+.job-title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.job-title {
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.job-company {
+  color: #236FB2;
+}
+
+.job-description {
+  margin-bottom: 10px;
+}
+
+.job-duration {
+  font-weight: 300;
+}
+
+span a {
+  font-weight: bold;
+  line-height: 1.2;
+  color: #236FB2;
+}
+
+.job-responsibilities ul{
+  margin-left: 15px;
+  list-style-type: disc;
+}
+
+.job-responsibilities li{
+  margin-bottom: 5px;
+}
+
+/***********************************
+* =Skills
+***********************************/
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-gap: 5px;
+  margin-bottom: 24px;
+}
+
+.skills-container ul {
+  margin-left: 5px;
+  list-style-type: disc;
+}
+
+/***********************************
+* =Interests
+***********************************/
+
+.interests-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.interests-container img {
+  height: 35px;
+  opacity: 0.75;
+}
+
+/***********************************
+* =References
+***********************************/
+
+.reference {
+  font-size: 18px;
+}
+
+.reference-details {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width : 768px) {
+  section.two-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .links, .job-title-container {
+    flex-direction: column;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .interests-container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .interests-container img {
+    margin-right: 32px;
+    margin-bottom: 16px;
+  }
+}
